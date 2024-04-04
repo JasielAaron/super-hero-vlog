@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS superhero_db;
-CREATE DATABASE superhero_db;
+DROP DATABASE IF EXISTS superherovlog_db;
+CREATE DATABASE superherovlog_db;
