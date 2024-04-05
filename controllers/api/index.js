@@ -1,1 +1,9 @@
-//Refer back to 14-MVS 28-Miniproject to see how routing is handled
+const router = require('express').Router();
+
+const userRoutes = require('./userRoutes');
+const blogRoutes = require('./blogRoutes');
+
+router.use('/users', userRoutes);
+router.use('/blogs', blogRoutes);
+
+module.exports = router;
