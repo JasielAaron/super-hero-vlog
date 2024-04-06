@@ -13,6 +13,8 @@ router.get('/', async (req, res) => {
 });
 module.exports = router
 
+//THE USER ROUTES HERE ARE BASICALLY THE SAME AS IN THE USERROUTES IN THE MINI PROJECT USE THEM
+
 // const router = require('express').Router();
 // const { User } = require('../../models');
 // router.post('/', async (req, res) => {
