@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { Blog } = require("../../models");
+const withAuth = require("../../utils/auth");
 //The lines below get all the blogs from the database
 //This routes url is localhost:3001/api/blogs/
 router.get('/', async (req, res) => {

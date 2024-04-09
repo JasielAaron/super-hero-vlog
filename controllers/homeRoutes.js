@@ -14,34 +14,34 @@ router.get('/', async (req, res) => {
 router.get('/universe/:name', async (req, res) => {
     try {
       // Get all blogs and JOIN with user data
-    //   const blogData = await Blog.findAll({
-    //     where: { universe: req.params.name},
-    //     include: [
-    //       {
-    //         model: User,
-    //         attributes: ['name'],
-    //       },
-    //     ],
-    //   });
+      const blogData = await Blog.findAll({
+        where: { universe: req.params.name},
+        include: [
+          {
+            model: User,
+            attributes: ['username'],
+          },
+        ],
+      });
   
     //   // Serialize data so the template can read it
-    //   const blogs = blogData.map((blog) => blog.get({ plain: true }));
-      const blogs = [
-        {
-            name: 'example',
-            description: 'This is an example universe',
-            universe: 'DC',
-            user: {name: 'edward'},
-            date_created: new Date()
-        },
-        {
-            name: 'example 2',
-            description: 'This is an example universe 2',
-            universe: 'DC',
-            user: {name: 'edward'},
-            date_created: new Date()
-        }
-      ]
+      const blogs = blogData.map((blog) => blog.get({ plain: true }));
+      // const blogs = [
+      //   {
+      //       name: 'example',
+      //       description: 'This is an example universe',
+      //       universe: 'DC',
+      //       user: {name: 'edward'},
+      //       date_created: new Date()
+      //   },
+      //   {
+      //       name: 'example 2',
+      //       description: 'This is an example universe 2',
+      //       universe: 'DC',
+      //       user: {name: 'edward'},
+      //       date_created: new Date()
+      //   }
+      // ]
   
       // Pass serialized data and session flag into template
       res.render('universe', { 
