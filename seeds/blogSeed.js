@@ -6,6 +6,7 @@ const blogData = [
     title: 'Batman',
     content: 'Most people dont know this but Batman also goes by the name, Dark Knight',
     user_id: 1,
+    universe: 'DC',
   },
 
 ];
