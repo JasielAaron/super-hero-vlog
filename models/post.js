@@ -11,6 +11,7 @@ Post.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       autoIncrement: true,
+      primaryKey: true
     },
     comment: {
       type: DataTypes.STRING,
