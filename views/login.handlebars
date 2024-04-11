@@ -1,23 +1,23 @@
-<h1>Log In</h1>
-<form class="login-form">
+<form id="login-form">
   <h1>Log In</h1>
   <label for="username">UserName</label>
-  <input type="text" id="username" autocomplete="username" >
+  <input type="text" autocomplete="on" id="username">
   <label for="password">Password</label>
-  <input type="password" id="password" autocomplete="no">
-  <button type="submit">Submit</button>
+  <input type="password" id="password">
+  <button id="loginButton" type="submit">Submit</button>
 </form>
 
-<form class="signup-form">
+<form id="signup-form">
   <h1>Sign Up</h1>
-  <label for="signupemail">Email</label>
-  <input type="text" id="signupemail" autocomplete="signup">
-  <label for="signupusername">UserName</label>
-  <input type="text" id="signupusername" auto>
-  <label for="signuppassword">Password</label>
-  <input type="password" id="signuppassword">
+  <label for="email-signup">Email</label>
+  <input type="text" id="email-signup">
+  <label for="username-signup">UserName</label>
+  <input type="text" id="username-signup">
+  <label for="password-signup">Password</label>
+  <input type="password" id="password-signup">
   <button type="submit">Submit</button>
 </form>
 
+<script src="./js/login.js">
 
-<script src="./js/login.js"></script>
+</script>

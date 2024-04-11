@@ -17,7 +17,7 @@ router.get('/:id', async (req, res) => {
   try {
     const blogData = await Blog.findByPk(req.params.id)
     // if we dont have blog data THEN...
-    if(!blogData) {
+    if (!blogData) {
       return res.status(404).json({
         message: 'We cannot find the blog by this id!'
       })
@@ -32,8 +32,8 @@ router.get('/:id', async (req, res) => {
 //This url is /api/blogs/ with a post method
 router.post('/', async (req, res) => {
   try {
-    const newBlog = await Blog.create(req.body);
-    return res.status(200).json(newBlog);
+    const newBlog = await Blog.create({ ...req.body, user_id: req.session.user_id });
+    res.status(200).json(newBlog);
   } catch (err) {
     res.status(500).json(err);
   }
