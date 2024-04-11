@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Super Hero Blog</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -14,12 +14,11 @@
   <div>
     <header>
       <h1>
-        <a href="/">Choose your Universe!</a>
+        <a href="/">The Superhero Blog!</a>
       </h1>
       <nav>
         {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button>logout</button>
+        <a href="/" id="logout">Logout</a>
         {{else}}
         <a href="/login">login</a>
         {{/if}}
@@ -29,7 +28,7 @@
       {{{ body }}}
     </main>
     <footer>
-      
+
     </footer>
   </div>
 

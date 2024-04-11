@@ -1,11 +1,22 @@
-<div>
-    <h1>Choose your Universe!</h1>
-    <div class="container">
-    <a href="/universe/dc" class = "DC">
-        <div id="DC-btn">DC</div>
-    </a>
-    <a href="/universe/marvel" class = "Marvel">
-        <div id="Marvel-btn">Marvel</div>
-    </a>
+<div class="center">
+    {{#if logged_in}}
+    <a href="/create">Add new Superhero</a>
+    {{/if}}
+
+    {{#each blogs as |blog| }}
+    <div class="blog">
+        <div>
+            <h2>
+                {{blog.title}}
+            </h2>
+            <p>Created by {{blog.user.username}} on {{format_date blog.create_on_date}}</p>
+        </div>
+        <div>
+            <p>
+                {{blog.content}}
+            </p>
+        </div>
     </div>
+    {{/each}}
+
 </div>
