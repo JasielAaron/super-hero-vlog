@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class ="has-background-grey-dark">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Super Hero Blog</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">  
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -13,14 +13,18 @@
 <body>
   <div>
     <header>
-      <h1>
+      <h1 class = "has-text-centered is-size-2">
         <a href="/">The Superhero Blog!</a>
       </h1>
-      <nav>
+      <nav class="has-text-right mr-2">
         {{#if logged_in}}
+        <h2 class="is-size-5">
         <a href="/" id="logout">Logout</a>
+        </h2>
         {{else}}
-        <a href="/login">login</a>
+        <h2 class="is-size-5">
+        <a href="/login">Login</a>
+        </h2>
         {{/if}}
       </nav>
     </header>
