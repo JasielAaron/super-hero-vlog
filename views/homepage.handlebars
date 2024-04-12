@@ -1,20 +1,20 @@
 <div class="center">
     {{#if logged_in}}
-    <a href="/create">Add new Superhero</a>
+    <a href="/create">Add New Superhero</a>
     {{/if}}
 
     {{#each blogs as |blog| }}
-    <div class="blog">
+    <div id="blog">
         <div>
             <h2>
                 {{blog.title}}
             </h2>
-            <p>Created by {{blog.user.username}} on {{format_date blog.create_on_date}}</p>
         </div>
         <div>
             <p>
                 {{blog.content}}
             </p>
+          <p>Created by {{blog.user.username}} on {{format_date blog.create_on_date}}</p>
         </div>
     </div>
     {{/each}}

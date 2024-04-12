@@ -1,4 +1,4 @@
-html,
+/* html,
 body,
 .container,
 main {
@@ -21,9 +21,9 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 
-.blog {
+#blog {
     border: 2px solid black;
     padding: 20px;
     width: 50%;
